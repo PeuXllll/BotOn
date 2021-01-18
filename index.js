@@ -116,7 +116,7 @@ client.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `sayonara pessoa @${num.split('@')[0]} quem sabe possa voltar`
+				teks = `@${num.split('@')[0]} quem sabe possa voltar`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -1051,3 +1051,10 @@ client.on('group-participants-update', async (anu) => {
 			console.log('Error : %s', color(e, 'red'))
 		}
 	})
+                            case 'Pedro':
+					me = client.user
+					uptime = process.uptime()
+					teks = `O mais brabo`
+					buffer = await getBuffer(me.imgUrl)
+					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
+					break
