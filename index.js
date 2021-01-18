@@ -1051,10 +1051,3 @@ client.on('group-participants-update', async (anu) => {
 			console.log('Error : %s', color(e, 'red'))
 		}
 	})
-                            case 'Pedro':
-					me = client.user
-					uptime = process.uptime()
-					teks = `O mais brabo`
-					buffer = await getBuffer(me.imgUrl)
-					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
-					break
